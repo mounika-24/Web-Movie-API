@@ -19,7 +19,7 @@ function displayResultCards(content, containerEl) {
         titledate
     } = content;
     console.log(title);
-    if (poster === null && img !== null) {
+    if ((poster === null || poster === "0") && img !== null) {
         poster = img;
     } else if (poster === null && img === null) {
         poster = "https://res.cloudinary.com/mamidala24/image/upload/v1650820094/Poster_not_available_vnozxz.png";
