@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mainpage.css">
+    <script type="text/javascript" src="M:\Zivame\movie_listing_web\homepage\mainpage.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+        <a class="navbar-brand mr-1" style="color: #d7f518; font-weight:bold" href="#">UNGB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #d7f518; font-weight:bold" onclick="loadHomePage()">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #d7f518; font-weight:bold">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #d7f518; font-weight:bold">Series</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " style="color: #d7f518" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Genre
+                    </a>
+                    <div class="dropdown-menu nav-bg" style="backgroundColor: #0a376e">
+                        <a class="dropdown-item" href="#" style="color: #d7f518">Action</a>
+                        <a class="dropdown-item" href="#" style="color: #d7f518">Teen</a>
+                    </div>
+                </li>
+              -->
+            </ul>
+        </div>
+    </nav>
+    <div class="main-page" id="mainPage">
+        <div id="sectionHomePage">
+            <div class="top-row w-100">
+                <div class="main-heading">
+                    <h1 style="font-size: 40px">Welcome</h1>
+                    <p style="font-size: 30px">Discover movies and tvshows on netflix available in your area.</p>
+                    <div class="w-100">
+                        <div class="my-2 my-lg-0 form-class">
+                            <label class="w-100">
+                                <input class="main-search-input" type="search" placeholder="Search for movie or tvshow" aria-label="Search" id="mainSearchInput">
+                            </label>
+                            <input class="inline-search" type="submit" value="Search" onclick="display('sectionSearchResultsPage')" id="mainSearchButton">
+                            <!--<button type="submit">Search</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="sample-section" id="samplePopularSection1">
+                    <div class="section-heading">
+                        <h1 class="side-heading">
+                            NGB Picks <a href="https://ungbpopular.ccbp.tech/" class="side-tag">see all >> </a>
+                        </h1>
+                    </div>
+                    <div class="content-container" id="homepagePopular">
+                        <div class="col-12 d-none mt-5" id="spinnerContent">
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="spinner-border" role="status"></div>
+                            </div>
+                        </div>
+                        <!--Content from JS -->
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="sample-section" id="sampleLatestSection1">
+                    <div class="section-heading">
+                        <h1 class="side-heading">
+                            Latest Releases <a href="https://ungblatest.ccbp.tech/" class="side-tag">see all >> </a>
+                        </h1>
+                    </div>
+                    <div class="content-container" id="homepageLatest">
+                        <div class="col-12 d-none mt-5" id="spinnerLatest">
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="spinner-border" role="status"></div>
+                            </div>
+                        </div>
+                        <!--Content from JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sectionSearchResultsPage" class="">
+            <div class="searchResults" id="searchResults">
+                <div class="col-12 d-none mt-5" id="spinnerSearch">
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="spinner-border" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sectionContentDetails"></div>
+    </div>
+    <!--Main page code ends-->
+    <footer class="footer">
+        <h1>Netflix Movie DB</h1>
+        <p>Reference rapidapi.com unogsNG API</p>
+        <p>Website by Mounika Mamidala</p>
+    </footer>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>

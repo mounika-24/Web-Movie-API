@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="latestContent.css">
+    <script type="text/javascript" src="M:\Zivame\movie_listing_web\latest_content\latestContent.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+        <a class="navbar-brand mr-1" style="color: #d7f518; font-weight:bold" href="#">UNGB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://netflixmoviedb.ccbp.tech/" style="color: #d7f518; font-weight:bold">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #d7f518; font-weight:bold">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #d7f518; font-weight:bold">Series</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " style="color: #d7f518" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Country
+                    </a>
+                    <div class="dropdown-menu nav-bg" style="backgroundColor: #0a376e">
+                        <a class="dropdown-item" href="#" style="color: #d7f518">Action</a>
+                        <a class="dropdown-item" href="#" style="color: #d7f518">Teen</a>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <div class="latest-page" id="sectionHomepage">
+            <div class="popular-conatiner">
+                <div class="results-container" id="resultsContainer">
+                    <div class="col-12 d-none mt-5" id="spinnerLatest">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="spinner-border" role="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sectionContentDetails"></div>
+    </div>
+    <footer class="footer">
+        <h1>Netflix Movie DB</h1>
+        <p>Reference rapidapi.com unogsNG API</p>
+        <p>Website by Mounika Mamidala</p>
+    </footer>
+</body>
+
+</html>
