@@ -22,7 +22,7 @@ function displayResultCards(content, containerEl) {
         titledate
     } = content;
     console.log(title);
-    if (poster === null && img !== null) {
+    if ((poster === null || poster === "0" || poster === "N/A") && img !== null) {
         poster = img;
     } else if (poster === null && img === null) {
         poster = "https://res.cloudinary.com/mamidala24/image/upload/v1650820094/Poster_not_available_vnozxz.png";
@@ -57,15 +57,15 @@ function displayResultCards(content, containerEl) {
     ratingEl.textContent = "IMDB Rating: " + imdbrating;
     sampledetailsConteainer.appendChild(ratingEl);
 
-    let dateEl = document.createElement("p");
-    dateEl.textContent = titledate;
-    sampledetailsConteainer.appendChild(dateEl);
+    //let dateEl = document.createElement("p");
+    //dateEl.textContent = titledate;
+    //sampledetailsConteainer.appendChild(dateEl);
 
 
 
 }
 
-const popularSearchUrl = `https://unogsng.p.rapidapi.com/search?start_year=1972&orderby=rating&limit=10&subtitle=english&audio=english&country_andorunique=unique&offset=0&end_year=2022`;
+const popularSearchUrl = `https://unogsng.p.rapidapi.com/search?start_year=1972&orderby=rating&limit=50&subtitle=english&audio=english&country_andorunique=unique&offset=0&end_year=2022`;
 
 const getHomeContent = async (url, containerEl) => {
     spinnerContentDiv.classList.remove("d-none");
