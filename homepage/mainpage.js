@@ -28,7 +28,7 @@ function displaySampleCards(content, containerEl) {
         titledate
     } = content;
     //console.log(title);
-    if (poster === null && img !== null) {
+    if ((poster === null || poster === "0") && img !== null) {
         poster = img;
     } else if (poster === null && img === null) {
         poster = "https://res.cloudinary.com/mamidala24/image/upload/v1650820094/Poster_not_available_vnozxz.png";
@@ -81,12 +81,12 @@ function displaySearchResult(result) {
         titledate
     } = result;
     //console.log(title);
-    if (poster === null && img !== null) {
+    if ((poster === null || poster === "0") && img !== null) {
         poster = img;
     } else if (poster === null && img === null) {
         poster = "https://res.cloudinary.com/mamidala24/image/upload/v1650820094/Poster_not_available_vnozxz.png";
     }
-
+    //console.log(poster);
     spinner.classList.add("d-none");
     const resultContainer = document.createElement("div");
     resultContainer.classList.add("result-conatiner");
@@ -97,7 +97,7 @@ function displaySearchResult(result) {
     resultContainer.appendChild(posterContainer);
 
     const posterEl = document.createElement("img");
-    posterEl.src = poster;
+    posterEl.src = img;
     posterEl.classList.add("result-poster");
     posterContainer.appendChild(posterEl);
 
@@ -130,7 +130,7 @@ const latestSearchUrl = 'https://unogsng.p.rapidapi.com/search?start_year=1972&o
 const getHomeContent = async (url, containerEl) => {
     spinnerLatestDiv.classList.remove("d-none");
     spinnerContentDiv.classList.remove("d-none");
-    console.log(popularSearchUrl);
+    //console.log(popularSearchUrl);
     try {
         const response = await fetch(url, options);
         const jsonData = await response.json();
